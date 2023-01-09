@@ -7,6 +7,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
+import { ImageHeroPipe } from './pipes/image-hero.pipe';
 
 
 @NgModule({
@@ -15,12 +19,16 @@ import { HeroesRoutingModule } from './heroes-routing.module';
     SearchComponent,
     HeroComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    HeroesCardComponent,
+    ImageHeroPipe
   
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class HeroesModule { }
