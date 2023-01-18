@@ -12,6 +12,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
 import { ImageHeroPipe } from './pipes/image-hero.pipe';
 import { FormsModule } from '@angular/forms';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ListComponent,
     HeroesCardComponent,
-    ImageHeroPipe
+    ImageHeroPipe,
+    ConfirmComponent
   
   ],
   imports: [

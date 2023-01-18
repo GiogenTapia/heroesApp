@@ -1,4 +1,10 @@
-<h1>New Hero <small>asd</small></h1>
+<h1>
+    {{
+        (hero.id)?'Edit':'New'
+    }} 
+    Hero 
+    <small>{{hero.superhero}}</small>
+</h1>
 
 <div fxLayout="row"
 fxLayout.xs="column"
@@ -59,10 +65,22 @@ fxLayout.xs="column"
         </mat-form-field>
 
         <br>
-            <button mat-raised-button color="primary" (click)="save()">
+        <div fxLayout>
+            <button mat-raised-button color="primary" 
+            (click)="save()">
                 <mat-icon>edit</mat-icon>
-                Save</button>
+                {{(hero.id)?'Update':'Create'}}
+            </button>
 
+          <span class="spacer"></span>
+
+                <button  *ngIf="hero.id"
+                mat-raised-button color="warn" 
+                (click)="deleteHero()">
+                    <mat-icon>remove</mat-icon>
+                    Delete
+                </button>
+            </div>
     </div>
    
 
